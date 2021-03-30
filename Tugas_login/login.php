@@ -1,6 +1,6 @@
 <?php 
 
-require_once("koneksi.php");
+require_once("config.php");
 
 if(isset($_POST['login'])){
 
@@ -27,7 +27,7 @@ if(isset($_POST['login'])){
             // buat Session
             session_start();
             $_SESSION["user"] = $user;
-            // login sukses, alihkan ke halaman timeline
+            // login sukses, alihkan ke halaman berhasil
             header("Location: berhasil.php");
         }
     }
